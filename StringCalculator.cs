@@ -1,6 +1,6 @@
 public class StringCalculator
 {
-  public int Add(int input)
+  public int Add(string input)
   {
     return 0;
   }
