@@ -82,5 +82,5 @@ public class StringCalculatorAddTests
 
        Assert.Equal(expectedResult, result);
     }
-*/
+
 }
