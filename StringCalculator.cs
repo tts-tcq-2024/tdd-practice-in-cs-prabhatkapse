@@ -44,8 +44,13 @@ public class StringCalculator
         }
 
         string[] numberStrings = numbers.Split(delimiters, StringSplitOptions.None);
-        List<int> numberList = new List<int>();
 
+        return getNumberList(numberStrings);
+    }
+
+    private static List<int> getNumberList(string[] numberStrings)
+    {
+        var numberList = new List<int>();
         foreach (var numberString in numberStrings)
         {
             if (int.TryParse(numberString, out int number))
@@ -57,7 +62,6 @@ public class StringCalculator
             }
         }
         return numberList;
-
     }
 }
 
