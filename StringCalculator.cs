@@ -11,7 +11,7 @@ public class StringCalculator
         var negativeNumbers = checkNegativeNumber(numberList);
 
         if (negativeNumbers.Count > 0)
-            throw new NegativeNumberException($"Negatives not allowed: { string.Join(", ", negativeNumbers) }");
+            throw new Exception($"Negatives not allowed: { string.Join(", ", negativeNumbers) }");
 
         return numberList.Sum();
     }
@@ -64,10 +64,3 @@ public class StringCalculator
         return numberList;
     }
 }
-
-class NegativeNumberException : Exception
-{
-    public NegativeNumberException(string message) : base(message) { }
-}
-
-
